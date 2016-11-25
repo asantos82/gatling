@@ -1,6 +1,6 @@
 # Base Docker Image
 
-* [java:8-jdk](https://registry.hub.docker.com/_/java/)
+* [openjdk:8-jdk](https://registry.hub.docker.com/_/openjdk/)
 
 # Docker Tags
 
