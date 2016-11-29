@@ -41,11 +41,12 @@ docker run -it --rm dresantos/gatling recorder
 ```
 
 
-Mount configuration and simulation files from host machine and run gatling in interactive mode
+Mount configuration and simulation files from host machine and launch recorder in X11
 
 ```
-docker run -it --rm -v /home/core/gatling/conf:/opt/gatling/conf \
--v /home/core/gatling/user-files:/opt/gatling/user-files \
--v /home/core/gatling/results:/opt/gatling/results \
-dresantos/gatling
+docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+-v $HOME/gatling/gatling/conf:/opt/gatling/conf \
+-v $HOME/gatling/user-files:/opt/gatling/user-files \
+-v $HOME/gatling/results:/opt/gatling/results \
+--rm -p 8000:8000 dresantos/gatling recorder
 ```
