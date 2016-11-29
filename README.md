@@ -21,11 +21,24 @@ Latest version:
 
 # Usage
 
-Use image to run container
+Runing the container and entering bash
 
 ```
 docker run -it --rm dresantos/gatling
 ```
+
+Runing gatling
+
+```
+docker run -it --rm dresantos/gatling gatling
+```
+
+Runing recorder
+
+```
+docker run -it --rm dresantos/gatling recorder
+```
+
 
 Mount configuration and simulation files from host machine and run gatling in interactive mode
 
