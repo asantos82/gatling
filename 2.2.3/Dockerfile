@@ -25,6 +25,9 @@ RUN apt-get -y update && \
 # change context to gatling directory
 WORKDIR  /opt/gatling
 
+RUN ln -s /opt/gatling/bin/gatling.sh /opt/gatling/bin/gatling && \
+  ln -s /opt/gatling/bin/recorder.sh /opt/gatling/bin/recorder
+
 # set directories below to be mountable from host
 VOLUME ["/opt/gatling/conf", "/opt/gatling/results", "/opt/gatling/user-files"]
 
