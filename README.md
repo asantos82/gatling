@@ -36,6 +36,7 @@ docker run -it --rm dresantos/gatling gatling
 Runing recorder
 
 ```
+xhost +
 docker run -it --rm dresantos/gatling recorder
 ```
 
